@@ -52,7 +52,7 @@ int main(int argc, char* argv[])
 	srand(unsigned(time(NULL)));
 
 	string title{"Open Hexagon " + getVersion() + " - vee software"};
-	
+
 	GameWindow window{title, getWidth(), getHeight(), getPixelMultiplier(), getLimitFps(), getFullscreen()};
 	window.isFrameTimeStatic = getStaticFrameTime();
 	window.staticFrameTime = getStaticFrameTimeValue();

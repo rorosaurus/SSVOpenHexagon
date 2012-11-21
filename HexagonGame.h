@@ -38,6 +38,7 @@
 #include "Data/MusicData.h"
 #include "Data/ScriptData.h"
 #include "Data/StyleData.h"
+#include "AScript/AScriptManager.h"
 
 using namespace sf;
 using namespace ssvs;
@@ -63,6 +64,8 @@ namespace hg
 			MusicData musicData;
 			StyleData styleData;
 			Music* musicPtr{nullptr};
+
+			AScriptManager aScriptManager;
 
 			Timeline timeline;
 
@@ -91,7 +94,10 @@ namespace hg
 			float fastSpin{0};
 
 			bool hasDied{false};
+
 			bool mustRestart{false};
+			bool restartFirstTime{false};
+			string restartId{""};
 
 			void update(float);
 			inline void updateIncrement();
@@ -113,7 +119,7 @@ namespace hg
 			void randomSideChange();
 			void checkAndSaveScore();
 			void goToMenu();
-			void changeLevel(string mId);
+			void changeLevel(string mId, bool mFirstTime);
 			void addMessage(string mMessage, float mDuration);
 			void clearMessages();
 

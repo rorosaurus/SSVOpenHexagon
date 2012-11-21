@@ -65,6 +65,7 @@ namespace hg
 	MusicData getMusicData(string mId);
 	StyleData getStyleData(string mId);
 	LevelData getLevelData(string mId);
+	ScriptData getScriptData(string mId, HexagonGame* mHgPtr);
 
 	vector<LevelData> getAllLevelData();
 	vector<string> getAllMenuLevelDataIds();
@@ -75,8 +76,6 @@ namespace hg
 	void setCurrentProfile(ProfileData& mProfilePair);
 	ProfileData& getCurrentProfile();
 	string getCurrentProfileFilePath();
-
-	ScriptData getScriptData(string mId, HexagonGame* mHgPtr);
 }
 
 #endif /* ASSETS_H_ */

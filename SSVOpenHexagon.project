@@ -47,6 +47,25 @@
       <File Name="Utils/Utils.cpp"/>
       <File Name="Utils/Utils.h"/>
     </VirtualDirectory>
+    <VirtualDirectory Name="AScript">
+      <VirtualDirectory Name="scriptstdstring">
+        <File Name="AScript/scriptstdstring/scriptstdstring.cpp"/>
+        <File Name="AScript/scriptstdstring/scriptstdstring.h"/>
+        <File Name="AScript/scriptstdstring/scriptstdstring_utils.cpp"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="scriptbuilder">
+        <File Name="AScript/scriptbuilder/scriptbuilder.cpp"/>
+        <File Name="AScript/scriptbuilder/scriptbuilder.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="scriptarray">
+        <File Name="AScript/scriptarray/scriptarray.cpp"/>
+        <File Name="AScript/scriptarray/scriptarray.h"/>
+      </VirtualDirectory>
+      <File Name="AScript/AScriptManager.cpp"/>
+      <File Name="AScript/AScriptManager.h"/>
+      <File Name="AScript/AScriptUtils.h"/>
+      <File Name="AScript/AScriptUtils.cpp"/>
+    </VirtualDirectory>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
@@ -116,11 +135,12 @@
       </Completion>
     </Configuration>
     <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-O3;-pedantic;-Wall;-c;-std=c++11;-Wextra" C_Options="-O2;-Wall" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
+      <Compiler Options="-g;-pedantic;-Wall;-c;-std=c++11;-Wextra" C_Options="-O2;-Wall" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" UseDifferentPCHFlags="no" PCHFlags="">
         <IncludePath Value="../SSVEntitySystem"/>
         <IncludePath Value="../SSVStart"/>
         <IncludePath Value="D:/Vee/Software/WIP/SFMLMinGW/include"/>
         <IncludePath Value="D:/Vee/Software/WIP/jsoncpp/include"/>
+        <IncludePath Value="D:/Vee/Software/WIP/angelscript/sdk/add_on"/>
       </Compiler>
       <Linker Options="" Required="yes">
         <LibraryPath Value="../SSVStart/Release"/>
@@ -134,6 +154,7 @@
         <Library Value="sfml-system"/>
         <Library Value="sfml-audio"/>
         <Library Value="json_mingw_libmt"/>
+        <Library Value="angelscript"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName).exe" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="no"/>
